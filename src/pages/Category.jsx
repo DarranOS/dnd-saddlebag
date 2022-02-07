@@ -16,8 +16,7 @@ import ListingItem from '../components/ListingItem'
 
 const Category = () => {
   const [listings, setListings] = useState()
-  const [sortedBy, setSortedBy] = useState('regularPrice')
-  const [sortDirection, setSortDirection] = useState('asc')
+
   const [lastFetchedListing, setLastFetchedListing] = useState(null)
 
   const [loading, setLoading] = useState(true)
@@ -33,7 +32,7 @@ const Category = () => {
         const q = query(
           listingsRef,
           where('type', '==', params.categoryName),
-          orderBy(sortedBy, sortDirection),
+          orderBy('regularPrice', 'asc'),
 
           limit(10)
         )
@@ -61,7 +60,7 @@ const Category = () => {
     }
 
     fetchListings()
-  }, [params.categoryName, sortedBy, sortDirection])
+  }, [params.categoryName])
 
   // Pagination / Load More
   const onFetchMoreListings = async () => {
@@ -73,7 +72,7 @@ const Category = () => {
       const q = query(
         listingsRef,
         where('type', '==', params.categoryName),
-        orderBy(sortedBy, sortDirection),
+        orderBy('regularPrice', 'asc'),
         startAfter(lastFetchedListing),
         limit(10)
       )
