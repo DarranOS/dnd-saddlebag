@@ -48,7 +48,27 @@ function Slider() {
   return (
     listings && (
       <>
-        <Swiper slidesPerView={1} pagination={{ clickable: true }}>
+        <Swiper
+          pagination={{ clickable: true }}
+          spaceBetween={16}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              width: 640,
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            // when window width is >= 768px
+            992: {
+              width: 992,
+              slidesPerView: 3,
+            },
+          }}
+        >
           {listings.map(({ data, id }) => (
             <SwiperSlide
               key={id}

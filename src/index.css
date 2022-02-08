@@ -319,7 +319,14 @@ button {
 
 .swiper-container {
   min-height: 425px;
-  height: 50vw;
+  height: 40vw;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.swiper-wrapper {
+  margin: 0;
+  width: 100%;
 }
 
 .swiper-pagination-bullet-active {
@@ -347,6 +354,7 @@ button {
   font-size: 1.25rem;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5rem;
+  border-radius: 0 1rem 1rem 0;
 }
 @media (min-width: 1024px) {
   .swiperSlideText {
@@ -365,9 +373,47 @@ button {
   padding: 0.4rem 0.8rem;
   border-radius: 1rem;
 }
-@media (min-width: 1024px) {
-  .swiperSlidePrice {
-    font-size: 1.25rem;
+@media (min-width: 640px) {
+  .swiper-container {
+    width: 100%;
+    max-height: 25vh;
+  }
+
+  .swiperSlideDiv {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .swiper-container {
+    width: 100%;
+    max-height: 25vh;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 50%;
+    min-width: 50vw;
+    height: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .swiper-container {
+    width: 100%;
+    max-height: 45vh;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 33.3vw;
+    min-width: 33.3vw;
+    /* min-width: 330px; */
+    height: 100%;
   }
 }
 
@@ -376,8 +422,21 @@ button {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .exploreCategories a {
   width: 48%;
+}
+
+@media (min-width: 992px) {
+  .exploreCategories {
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .exploreCategories a {
+    width: 30%;
+  }
 }
 
 .exploreCategoryImg {
@@ -387,6 +446,16 @@ button {
   border-radius: 1.5rem;
   object-fit: cover;
   margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .exploreCategoryImg {
+    height: 12vw;
+    width: 100%;
+    border-radius: 1.5rem;
+    object-fit: cover;
+    margin: 0 auto;
+  }
 }
 
 .exploreCategoryName {
