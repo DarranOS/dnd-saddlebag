@@ -1,0 +1,23 @@
+.image {
+  min-height: 115px;
+  height: 40vw;
+  width: 100%;
+  border-radius: 1.5rem;
+  object-fit: contain;
+  margin: 0 auto;
+  padding: 0.4rem;
+  background-color: var(--color-white);
+  margin-bottom: -1.2rem;
+  transition: all 0.4s;
+
+  @media (min-width: 668px) {
+    height: 20vw;
+  }
+  @media (min-width: 992px) {
+    height: 15vw;
+  }
+}
+
+.root:hover .image {
+  padding: 1rem;
+}

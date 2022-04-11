@@ -1,0 +1,83 @@
+.root {
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    width: 30%;
+  }
+}
+
+.form {
+  width: 100%;
+}
+
+.inputDiv {
+  overflow: hidden;
+  margin-block: 1rem;
+  padding-inline: 1rem;
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  svg {
+    fill: var(--color-primary);
+    height: 24px;
+    width: 24px;
+  }
+  input {
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.02rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 0.6rem 0.6rem;
+    border: none;
+    outline: line;
+    width: 100%;
+
+    &:active,
+    &:focus {
+      caret-color: var(--color-primary);
+      outline: none;
+    }
+  }
+}
+
+.forgotPasswordLink {
+  cursor: pointer;
+  color: var(--color-gold);
+  font-weight: 600;
+  text-align: right;
+}
+
+.loginButtons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: inherit;
+}
+
+.signUpDiv {
+  margin-top: 2rem;
+  justify-content: start;
+  width: 100%;
+}
+
+.instructions {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: start;
+  p:first-child {
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+  }
+
+  p {
+    color: white;
+    margin-block: 0.2rem;
+  }
+}

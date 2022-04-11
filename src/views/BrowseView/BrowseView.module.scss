@@ -1,0 +1,16 @@
+.categories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 100%;
+
+  @media (min-width: 668px) {
+    height: auto;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    height: 160px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

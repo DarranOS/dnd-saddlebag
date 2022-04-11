@@ -1,30 +1,18 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This was a fun time saving app for my DnD group.
+It's a React app that uses Firebase as our backend to store a database and images.
 
-## Available Scripts
+This project was originally based on this Udemy tutorial
+https://www.udemy.com/course/react-front-to-back-2022/
 
-In the project directory, you can run:
+However, I've heavily refactored it, for reusability, easier maintainance and added new features.
+For example, the original tutorial has a single 970 line index.css file.
 
-### `npm start`
+### What I've changed.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- I restuctured each react component into a MVC folder structure with the JSX separate from the business logic.
+- I commented all of the business logic as though I was explaining it to a colleague
+- Refactored styling into multiple SASS modules per each JSX file.
+- Complete visual redesign
+- Switched to react context for main states.

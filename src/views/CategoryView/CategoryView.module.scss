@@ -1,0 +1,30 @@
+.banner {
+  align-items: start;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (min-width: 668px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  width: 100%;
+
+  * {
+    margin-bottom: 0.5rem;
+  }
+  *:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  @media (min-width: 668px) {
+    width: 60%;
+    justify-content: end;
+  }
+}

@@ -1,0 +1,76 @@
+.detailsHeader {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  place-items: start start;
+
+  @media (min-width: 668px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem 3rem;
+  }
+  @media (min-width: 1640px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2rem 3rem;
+  }
+}
+
+.profileCard {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.profileNameDiv {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.profileName,
+.profileEmail,
+.profileEmailActive,
+.profileNameActive {
+  all: unset;
+  margin: 0;
+  font-weight: 600;
+  width: 80%;
+  border-radius: 0.3rem;
+}
+
+.profileNameActive,
+.profileEmailActive {
+  background-color: rgba(185, 28, 28, 0.1);
+}
+
+.profileEmail,
+.profileEmailActive {
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.changeDetails {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-block: 0;
+}
+
+.createListing {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  place-self: start start;
+
+  svg {
+    fill: var(--color-primary);
+  }
+}
