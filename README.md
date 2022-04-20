@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Bazaar App
 
 This was a fun time saving app for my DnD group.
 It's a React app that uses Firebase as our backend to store a database and images.
